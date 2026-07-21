@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react"
+import { Routes, Route, useLocation } from "react-router-dom"
 import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import MissionVision from "@/components/MissionVision"
@@ -8,6 +9,7 @@ import Industries from "@/components/Industries"
 import WhyUs from "@/components/WhyUs"
 import CTA from "@/components/CTA"
 import Footer from "@/components/Footer"
+import CaseStudy from "@/components/CaseStudy"
 import { ChevronUp } from "lucide-react"
 
 function ScrollToTop() {
@@ -40,7 +42,9 @@ function ScrollToTop() {
   )
 }
 
-function App() {
+function HomePage() {
+  const location = useLocation()
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -55,12 +59,22 @@ function App() {
 
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el))
     return () => observer.disconnect()
-  }, [])
+  }, [location])
 
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth"
     return () => { document.documentElement.style.scrollBehavior = "" }
   }, [])
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "")
+      const el = document.getElementById(id)
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 100)
+      }
+    }
+  }, [location])
 
   return (
     <>
@@ -77,6 +91,15 @@ function App() {
       <Footer />
       <ScrollToTop />
     </>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/case-study" element={<CaseStudy />} />
+    </Routes>
   )
 }
 
