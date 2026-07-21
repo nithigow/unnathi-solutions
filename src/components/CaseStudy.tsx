@@ -175,7 +175,7 @@ export default function CaseStudy() {
               </div>
             </div>
 
-            <div className="text-center mb-16 reveal visible">
+            <div className="text-center max-w-2xl mx-auto mb-16 reveal visible">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                 Key Deliverables
               </span>
@@ -183,6 +183,9 @@ export default function CaseStudy() {
                 What We Delivered
               </h2>
               <div className="w-12 h-1 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-light)] rounded-full mx-auto mt-4" />
+              <p className="text-[var(--color-secondary)] mt-5 leading-relaxed text-sm max-w-lg mx-auto">
+                End-to-end solutions covering recipe management, OT integration, traceability, and more.
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24 reveal visible">
@@ -217,38 +220,41 @@ export default function CaseStudy() {
               })}
             </div>
 
-            <div className="relative mb-24 reveal visible">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#020617] via-[#0F172A] to-[#1E293B] rounded-[var(--radius-2xl)]" />
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(5,150,105,0.08)_0%,transparent_60%)] rounded-[var(--radius-2xl)]" />
-              <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(circle_at_center,_#fff_1px,_transparent_1px)] bg-[length:16px_16px] rounded-[var(--radius-2xl)]" />
-              <div className="relative z-10 px-8 py-16 sm:px-16 sm:py-20">
-                <div className="text-center mb-12">
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent-light)]">
-                    Results
-                  </span>
-                  <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-white mt-4 tracking-tight">
-                    Business Outcomes
-                  </h2>
-                  <div className="w-12 h-1 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-light)] rounded-full mx-auto mt-4" />
-                </div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {outcomes.map((outcome) => (
-                    <div
-                      key={outcome}
-                      className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-[var(--color-accent)]/20 transition-all duration-300"
-                    >
-                      <div className="shrink-0 mt-0.5">
-                        <CheckCircle size={16} className="text-[var(--color-accent-light)]" />
+            <div className="mb-24 reveal visible">
+              <div className="text-center mb-12">
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+                  Results
+                </span>
+                <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-[var(--color-foreground)] mt-4 tracking-tight">
+                  Business Outcomes
+                </h2>
+                <div className="w-12 h-1 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-light)] rounded-full mx-auto mt-4" />
+                <p className="text-[var(--color-secondary)] mt-5 leading-relaxed text-sm max-w-lg mx-auto">
+                  Measurable improvements delivered across the manufacturing line.
+                </p>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {outcomes.map((outcome) => (
+                  <div
+                    key={outcome}
+                    className="group relative rounded-[var(--radius)] bg-[var(--color-surface)] border border-[var(--color-border)] p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-[var(--color-accent)]/20 transition-all duration-400 overflow-hidden"
+                  >
+                    <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-bl from-[var(--color-accent)]/[0.03] to-transparent rounded-bl-full group-hover:scale-[4] transition-transform duration-700" />
+                    <div className="relative flex items-start gap-3">
+                      <div className="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-[var(--color-accent)] group-hover:text-white transition-all duration-300">
+                        <CheckCircle size={14} className="text-[var(--color-accent)] group-hover:text-white transition-colors duration-300" />
                       </div>
-                      <span className="text-sm text-white/70 leading-relaxed">{outcome}</span>
+                      <span className="text-sm text-[var(--color-secondary)] leading-relaxed group-hover:text-[var(--color-foreground)] transition-colors duration-300">
+                        {outcome}
+                      </span>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
 
             <div className="reveal visible">
-              <div className="text-center mb-12">
+              <div className="text-center max-w-2xl mx-auto mb-12">
                 <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                   Tech Stack
                 </span>
@@ -256,6 +262,9 @@ export default function CaseStudy() {
                   Technologies &amp; Capabilities
                 </h2>
                 <div className="w-12 h-1 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-light)] rounded-full mx-auto mt-4" />
+                <p className="text-[var(--color-secondary)] mt-5 leading-relaxed text-sm max-w-lg mx-auto">
+                  A comprehensive suite of technologies powering the digital transformation.
+                </p>
               </div>
               <div className="flex flex-wrap justify-center gap-3">
                 {technologies.map(({ icon: Icon, label }) => (
