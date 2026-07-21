@@ -77,29 +77,32 @@ function HomePage() {
   }, [location])
 
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <MissionVision />
-        <Expertise />
-        <Excellence />
-        <Industries />
-        <WhyUs />
-        <CTA />
-      </main>
-      <Footer />
-      <ScrollToTop />
-    </>
+    <main>
+      <Hero />
+      <MissionVision />
+      <Expertise />
+      <Excellence />
+      <Industries />
+      <WhyUs />
+      <CTA />
+    </main>
   )
 }
 
 function App() {
+  const location = useLocation()
+  const isHome = location.pathname === "/"
+
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/case-study" element={<CaseStudy />} />
-    </Routes>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/case-study" element={<CaseStudy />} />
+      </Routes>
+      <Footer />
+      {isHome && <ScrollToTop />}
+    </>
   )
 }
 

@@ -99,8 +99,7 @@ export default function CaseStudy() {
 
   return (
     <div className="min-h-screen bg-[var(--color-background)]">
-      <div className="pt-[72px]">
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#020617] via-[#0F172A] to-[#1E293B] py-20 lg:py-28">
+        <section className="relative overflow-hidden bg-gradient-to-br from-[#020617] via-[#0F172A] to-[#1E293B] py-20 lg:py-28 pt-32">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(5,150,105,0.15)_0%,transparent_50%),radial-gradient(ellipse_at_80%_20%,rgba(2,132,199,0.1)_0%,transparent_50%)]" />
           <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_center,_#fff_1px,_transparent_1px)] bg-[length:24px_24px]" />
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--color-accent)]/30 to-transparent" />
@@ -324,7 +323,6 @@ export default function CaseStudy() {
             </div>
           </div>
         </section>
-      </div>
     </div>
   )
 }
