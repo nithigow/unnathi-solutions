@@ -1,18 +1,26 @@
-import { Factory, Microscope, Cpu, Pill, Cog, Wrench, Package, Syringe, Telescope, ShieldCheck, Truck } from "lucide-react"
+import { Truck, Cog, Cpu, Rocket, Check } from "lucide-react"
 
-const industries = [
-  { name: "Automotive", icon: Truck },
-  { name: "Aerospace", icon: Telescope },
-  { name: "Electronics & EMS", icon: Microscope },
-  { name: "Medical Devices", icon: Syringe },
-  { name: "Semiconductor", icon: Cpu },
-  { name: "Industrial Equipment", icon: Cog },
-  { name: "Precision Engineering", icon: Wrench },
-  { name: "Food & Beverage", icon: Package },
-  { name: "Packaging", icon: Package },
-  { name: "Pharmaceutical", icon: Pill },
-  { name: "Heavy Engineering", icon: Factory },
-  { name: "Defense & Aerospace", icon: ShieldCheck },
+const applications = [
+  {
+    name: "Automotive",
+    icon: Truck,
+    items: ["Engine Assembly", "EV Battery Assembly", "Chassis Assembly", "Powertrain Manufacturing"],
+  },
+  {
+    name: "Industrial Equipment",
+    icon: Cog,
+    items: ["Drives", "Switchgear", "Pumps", "Compressors"],
+  },
+  {
+    name: "Electronics",
+    icon: Cpu,
+    items: ["Assembly and Testing", "Product Configuration"],
+  },
+  {
+    name: "Aerospace & Rail",
+    icon: Rocket,
+    items: ["Safety Critical Assembly", "High Compliance Operations"],
+  },
 ]
 
 export default function Industries() {
@@ -26,29 +34,42 @@ export default function Industries() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16 reveal">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent-light)]">
-            Who We Serve
+            Ideal Applications
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-white mt-4 tracking-tight">
-            Industries We Serve
+            Built for Safety-Critical Assembly
           </h2>
           <div className="w-12 h-1 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-light)] rounded-full mx-auto mt-4" />
           <p className="text-white/50 mt-5 leading-relaxed text-sm max-w-lg mx-auto">
-            Deep domain expertise across discrete and process manufacturing industries.
+            Wherever a missed step or wrong torque has serious consequences, AssemblyGuard™ belongs.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 reveal">
-          {industries.map(({ name, icon: Icon }) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+          {applications.map(({ name, icon: Icon, items }) => (
             <div
               key={name}
-              className="group flex items-center gap-3 px-5 py-4 rounded-xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-[var(--color-accent)]/30 hover:shadow-lg hover:shadow-[var(--color-accent)]/5 hover:-translate-y-0.5 transition-all duration-300 cursor-default"
+              className="group relative rounded-[var(--radius-lg)] bg-white/[0.04] border border-white/[0.06] p-7 backdrop-blur-sm hover:bg-white/[0.06] hover:border-[var(--color-accent)]/30 hover:shadow-xl hover:shadow-[var(--color-accent)]/5 hover:-translate-y-1.5 transition-all duration-500 overflow-hidden"
             >
-              <div className="w-8 h-8 rounded-lg bg-[var(--color-accent)]/10 text-[var(--color-accent-light)] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                <Icon size={16} />
+              <div className="absolute -top-12 -right-12 w-24 h-24 bg-gradient-to-bl from-[var(--color-accent)]/[0.08] to-transparent rounded-bl-full group-hover:scale-[3] transition-transform duration-700" />
+              <div className="relative">
+                <div className="w-12 h-12 rounded-2xl bg-[var(--color-accent)]/10 text-[var(--color-accent-light)] flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-[var(--color-accent)] group-hover:text-white transition-all duration-500">
+                  <Icon size={22} />
+                </div>
+                <h3 className="font-heading font-bold text-white mb-4 group-hover:text-[var(--color-accent-light)] transition-colors duration-300">
+                  {name}
+                </h3>
+                <ul className="space-y-2.5">
+                  {items.map((item) => (
+                    <li key={item} className="flex items-center gap-2.5 text-sm text-white/55 group-hover:text-white/80 transition-colors duration-300">
+                      <span className="w-4 h-4 rounded-full bg-[var(--color-accent)]/15 text-[var(--color-accent-light)] flex items-center justify-center shrink-0">
+                        <Check size={11} />
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <span className="text-sm font-medium text-white/70 group-hover:text-white transition-colors duration-300">
-                {name}
-              </span>
             </div>
           ))}
         </div>

@@ -1,107 +1,83 @@
 import {
-  Monitor,
-  Radio,
+  BookOpen,
+  Wrench,
+  ListOrdered,
   Cable,
-  Code,
-  FolderKanban,
-  Award,
+  Fingerprint,
+  ShieldCheck,
 } from "lucide-react"
 
-const expertise = [
+const capabilities = [
   {
-    icon: Monitor,
-    title: "Manufacturing Execution Systems",
+    icon: BookOpen,
+    title: "Recipe Management",
     description:
-      "Scalable MES solutions for complete production control, real-time visibility, and operational intelligence on the shop floor.",
+      "Digitize and manage manufacturing recipes for every product variant.",
     items: [
-      "Production Planning & Scheduling",
-      "Work Order & Production Tracking",
-      "Digital Quality Management & SPC",
-      "OEE Monitoring & Downtime Analysis",
-      "Genealogy, Traceability & Serialization",
-      "Andon Management & EWI",
-      "Inventory & Material Tracking",
-      "Barcode & QR Code Integration",
+      "Centralized recipe library per variant",
+      "Version-controlled approved recipes",
+      "Automatic recipe validation",
+      "Controlled deployment to shop floor",
     ],
   },
   {
-    icon: Radio,
-    title: "Industry 4.0 Solutions",
+    icon: Wrench,
+    title: "Torque Management",
     description:
-      "Intelligent, connected systems for modern manufacturing from smart factories to AI-powered insights.",
+      "Ensure correct torque values, tightening strategy, and sequence execution.",
     items: [
-      "Smart Factory & IIoT Platforms",
-      "Real-Time Machine Monitoring",
-      "Predictive Maintenance",
-      "Production Analytics & Dashboards",
-      "Energy Monitoring",
-      "Paperless Manufacturing",
-      "AI-Powered Manufacturing Insights",
-      "Digital Workflows & Automation",
+      "Exact torque values per joint",
+      "Tightening strategy enforcement",
+      "Sequence-driven tightening",
+      "Pass/fail verification in real time",
+    ],
+  },
+  {
+    icon: ListOrdered,
+    title: "Sequence Control",
+    description:
+      "Prevent operators from skipping or reordering critical manufacturing steps.",
+    items: [
+      "Step-by-step guided execution",
+      "Blocked out-of-sequence operations",
+      "Mandatory step completion gates",
+      "Variant-specific operation flow",
     ],
   },
   {
     icon: Cable,
-    title: "Machine Connectivity & Integration",
+    title: "Tool Connectivity",
     description:
-      "Connecting manufacturing equipment with enterprise applications for seamless data flow across operations.",
+      "Connect torque tools, PLCs, scanners, test systems, and smart devices.",
     items: [
-      "CNC, PLC, SCADA & OPC UA",
-      "MTConnect, Fanuc FOCAS",
-      "Industrial Sensors & RFID",
-      "Vision Inspection & AOI Machines",
-      "SMT Production Lines",
-      "SAP, Oracle, MS Dynamics",
-      "Custom ERP & WMS Integration",
-      "REST APIs & SQL Databases",
+      "Torque controllers & wrenches",
+      "PLCs and smart sensors",
+      "Barcode & QR scanners",
+      "Test and measurement systems",
     ],
   },
   {
-    icon: Code,
-    title: "Custom Manufacturing Software",
+    icon: Fingerprint,
+    title: "Digital Traceability",
     description:
-      "Tailored applications built around your unique factory processes, legacy systems, and business goals.",
+      "Capture every operation, result, and parameter for future analysis.",
     items: [
-      "Production Management Systems",
-      "Machine Monitoring Platforms",
-      "Industrial Dashboards & BI",
-      "Traceability & Quality Solutions",
-      "Maintenance & Warehouse Automation",
-      "Digital Checklists & Approvals",
-      "Mobile & Cloud Platforms",
-      "Vendor & Compliance Management",
+      "Serial-number-linked audit trail",
+      "Full genealogy & component history",
+      "Parameter & result capture",
+      "Instant recall for audits",
     ],
   },
   {
-    icon: FolderKanban,
-    title: "Product Engineering",
+    icon: ShieldCheck,
+    title: "Error Proofing",
     description:
-      "Transforming innovative ideas into enterprise-grade software products with full-stack engineering excellence.",
+      "Built-in poka-yoke logic prevents process violations before they occur.",
     items: [
-      "Product Consulting & Strategy",
-      "System Architecture & Design",
-      "UI/UX Design",
-      "Full Stack Development",
-      "Cloud-Native Applications",
-      "API Development & DB Design",
-      "Performance Optimization",
-      "Modernization & Long-Term Support",
-    ],
-  },
-  {
-    icon: Award,
-    title: "Digital Manufacturing Excellence",
-    description:
-      "Combining manufacturing domain expertise with modern software engineering to drive measurable operational outcomes.",
-    items: [
-      "Productivity & OEE Improvement",
-      "Quality & Traceability",
-      "Regulatory Compliance",
-      "Asset Utilization",
-      "Production Visibility",
-      "Data-Driven Decision Making",
-      "Operational Efficiency",
-      "Cost Optimization",
+      "Automated process validation",
+      "Real-time deviation alerts",
+      "Mistake-proof operator flows",
+      "Root-cause prevention by design",
     ],
   },
 ]
@@ -115,23 +91,23 @@ export default function Expertise() {
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16 reveal">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
-            What We Do
+            Key Capabilities
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-[var(--color-foreground)] mt-4 tracking-tight">
-            Our Expertise
+            What AssemblyGuard&trade; Enforces
           </h2>
           <div className="w-12 h-1 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-light)] rounded-full mx-auto mt-4" />
           <p className="text-[var(--color-secondary)] mt-5 leading-relaxed text-sm max-w-lg mx-auto">
-            End-to-end capabilities spanning MES, Industry 4.0, machine integration, custom software, and product engineering.
+            Six core capabilities that turn your engineering intent into guaranteed shop floor execution.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
-          {expertise.map((exp) => {
-            const Icon = exp.icon
+          {capabilities.map((cap) => {
+            const Icon = cap.icon
             return (
               <div
-                key={exp.title}
+                key={cap.title}
                 className="group relative rounded-[var(--radius-lg)] bg-[var(--color-surface)] border border-[var(--color-border)] p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-[var(--color-accent)]/20 transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute -top-12 -right-12 w-24 h-24 bg-gradient-to-bl from-[var(--color-accent)]/[0.03] to-transparent rounded-bl-full group-hover:scale-[3] transition-transform duration-700" />
@@ -142,13 +118,13 @@ export default function Expertise() {
                     <Icon size={22} />
                   </div>
                   <h3 className="font-heading font-bold text-[var(--color-foreground)] mb-2 group-hover:text-[var(--color-accent)] transition-colors duration-300">
-                    {exp.title}
+                    {cap.title}
                   </h3>
                   <p className="text-xs text-[var(--color-secondary)]/80 leading-relaxed mb-5">
-                    {exp.description}
+                    {cap.description}
                   </p>
                   <ul className="space-y-2">
-                    {exp.items.map((item) => (
+                    {cap.items.map((item) => (
                       <li
                         key={item}
                         className="text-[11px] text-[var(--color-secondary)]/70 pl-5 relative before:absolute before:left-0 before:top-[3px] before:text-[var(--color-accent)] before:font-bold before:text-xs before:content-['→'] group-hover:before:translate-x-0.5 before:transition-transform duration-300"

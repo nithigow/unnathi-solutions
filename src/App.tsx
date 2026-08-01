@@ -2,11 +2,14 @@ import { useEffect, useRef } from "react"
 import { Routes, Route, useLocation } from "react-router-dom"
 import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
-import MissionVision from "@/components/MissionVision"
+import Problem from "@/components/Problem"
+import Solution from "@/components/Solution"
+import HowItWorks from "@/components/HowItWorks"
 import Expertise from "@/components/Expertise"
 import Excellence from "@/components/Excellence"
 import Industries from "@/components/Industries"
 import WhyUs from "@/components/WhyUs"
+import Metrics from "@/components/Metrics"
 import CTA from "@/components/CTA"
 import Footer from "@/components/Footer"
 import CaseStudy from "@/components/CaseStudy"
@@ -79,11 +82,14 @@ function HomePage() {
   return (
     <main>
       <Hero />
-      <MissionVision />
+      <Problem />
+      <Solution />
+      <HowItWorks />
       <Expertise />
       <Excellence />
       <Industries />
       <WhyUs />
+      <Metrics />
       <CTA />
     </main>
   )

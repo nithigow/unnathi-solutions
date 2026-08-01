@@ -1,18 +1,19 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Play, TrendingUp, Shield, Zap } from "lucide-react"
+import { ArrowRight, Play, ShieldCheck, CheckCircle2, Zap } from "lucide-react"
+import { AssemblyLine } from "@/components/illustrations"
 
 const stats = [
-  { value: "50+", label: "Manufacturing Clients" },
-  { value: "200+", label: "Projects Delivered" },
-  { value: "15+", label: "Years Combined Exp." },
+  { value: "0", label: "Skipped Steps" },
+  { value: "100%", label: "Process Compliance" },
+  { value: "0", label: "Wrong Torque" },
 ]
 
 const floatingIcons = [
-  { Icon: TrendingUp, x: 15, y: 20, delay: 0 },
-  { Icon: Shield, x: 80, y: 15, delay: 0.3 },
+  { Icon: ShieldCheck, x: 15, y: 20, delay: 0 },
+  { Icon: CheckCircle2, x: 80, y: 15, delay: 0.3 },
   { Icon: Zap, x: 85, y: 70, delay: 0.6 },
-  { Icon: TrendingUp, x: 10, y: 75, delay: 0.9 },
+  { Icon: CheckCircle2, x: 10, y: 75, delay: 0.9 },
 ]
 
 export default function Hero() {
@@ -41,35 +42,42 @@ export default function Hero() {
                 variant="accent"
                 className="px-4 py-1.5 text-xs font-semibold border border-[var(--color-accent)]/20 bg-[var(--color-accent)]/10 backdrop-blur-sm"
               >
-                Industry 4.0 &middot; Digital Manufacturing
+                AssemblyGuard&trade; &middot; Smart Process Enforcement
               </Badge>
             </div>
 
             <div className="reveal">
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] tracking-tight">
-                <span className="text-white">Transforming Manufacturing with </span>
+                <span className="text-white">Every Product. Every Step. </span>
                 <span className="bg-gradient-to-r from-[var(--color-accent-light)] via-[var(--color-accent)] to-[var(--color-accent-2-light)] bg-clip-text text-transparent">
-                  Industry 4.0
+                  Every Time.
                 </span>
               </h1>
             </div>
 
             <div className="reveal">
               <p className="text-lg text-white/50 leading-relaxed max-w-xl">
-                We empower manufacturers to accelerate digital transformation through innovative MES,
-                Industrial IoT, and custom software development.
+                Turn Engineering Intent into Perfect Shop Floor Execution. AssemblyGuard&trade; connects directly
+                with your MES, BOM, and assembly tools to ensure every operation is executed exactly as designed.
+              </p>
+            </div>
+
+            <div className="reveal">
+              <p className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-accent-light)] bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20 rounded-xl px-4 py-2">
+                <ShieldCheck size={16} />
+                Zero skipped steps. Zero wrong torque. Zero process deviations.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-4 reveal">
               <a href="#contact">
                 <Button size="xl" className="bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-dark)] hover:from-[var(--color-accent-dark)] hover:to-[var(--color-accent)] text-white font-bold gap-2 rounded-xl shadow-xl shadow-[var(--color-accent)]/25 hover:shadow-[var(--color-accent)]/40 hover:-translate-y-0.5 transition-all duration-300">
-                  Start Your Journey <ArrowRight size={18} />
+                  Book a Demo <ArrowRight size={18} />
                 </Button>
               </a>
               <a href="#expertise">
                 <Button size="xl" variant="outline" className="border-white/15 text-white/80 hover:bg-white/5 hover:text-white hover:border-white/30 rounded-xl">
-                  <Play size={18} /> Explore Expertise
+                  <Play size={18} /> Talk to an Expert
                 </Button>
               </a>
             </div>
@@ -78,17 +86,20 @@ export default function Hero() {
           <div className="reveal">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-[var(--color-accent)]/10 via-[var(--color-accent-2)]/5 to-transparent rounded-[var(--radius-2xl)] blur-2xl" />
-              <div className="relative grid grid-cols-3 gap-4 p-8 rounded-[var(--radius-2xl)] bg-white/[0.04] border border-white/[0.06] backdrop-blur-sm">
-                {stats.map((stat) => (
-                  <div key={stat.label} className="text-center">
-                    <div className="font-heading text-3xl sm:text-4xl font-extrabold bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">
-                      {stat.value}
+              <div className="relative">
+                <AssemblyLine className="w-full h-auto rounded-[var(--radius-2xl)]" />
+                <div className="grid grid-cols-3 gap-4 p-6 mt-6 rounded-[var(--radius-xl)] bg-white/[0.04] border border-white/[0.06] backdrop-blur-sm">
+                  {stats.map((stat) => (
+                    <div key={stat.label} className="text-center">
+                      <div className="font-heading text-3xl sm:text-4xl font-extrabold bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">
+                        {stat.value}
+                      </div>
+                      <div className="text-[10px] text-white/40 uppercase tracking-widest mt-1.5 font-medium">
+                        {stat.label}
+                      </div>
                     </div>
-                    <div className="text-[10px] text-white/40 uppercase tracking-widest mt-1.5 font-medium">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
