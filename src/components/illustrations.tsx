@@ -147,36 +147,34 @@ export function TraceGraph({ className }: { className?: string }) {
         ))}
       </g>
 
-      <rect x="220" y="150" width="120" height="120" rx="22" fill={C.surface} stroke={C.emerald} strokeWidth="2.5" />
-      <rect x="248" y="182" width="20" height="12" rx="3" fill={C.emerald} opacity="0.2" />
-      <text x="248" y="212" fill={C.slate} fontSize="15" fontWeight="800" fontFamily="Inter, sans-serif">SN-001234</text>
-      <text x="248" y="232" fill={C.slateLight} fontSize="11" fontFamily="Inter, sans-serif">Final Assembly</text>
-      <rect x="248" y="244" width="64" height="8" rx="4" fill={C.emerald} opacity="0.25" />
+      <rect x="200" y="150" width="160" height="130" fill={C.surface} stroke={C.emerald} strokeWidth="2.5" />
+      <rect x="258" y="172" width="44" height="20" rx="3" fill={C.emerald} opacity="0.15" />
+      <text x="280" y="212" textAnchor="middle" fill={C.slate} fontSize="18" fontWeight="800" fontFamily="Inter, sans-serif">SN-001234</text>
+      <text x="280" y="236" textAnchor="middle" fill={C.slateLight} fontSize="12" fontFamily="Inter, sans-serif">Final Assembly</text>
+      <rect x="248" y="252" width="64" height="7" fill={C.emerald} opacity="0.35" />
 
-      <rect x="60" y="70" width="96" height="60" rx="12" fill={C.surface} stroke={C.slateLight} />
-      <text x="76" y="94" fill={C.slate} fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">Part A</text>
-      <rect x="76" y="102" width="52" height="6" rx="3" fill={C.slate} opacity="0.15" />
-      <path d="M156 100l42 62" stroke={C.slateLight} strokeWidth="1.5" />
+      <rect x="52" y="70" width="112" height="64" fill={C.surface} stroke={C.slateLight} />
+      <text x="108" y="96" textAnchor="middle" fill={C.slate} fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">Part A</text>
+      <rect x="86" y="106" width="44" height="6" fill={C.slate} opacity="0.15" />
+      <path d="M164 102h40v54" stroke={C.slateLight} strokeWidth="1.5" />
 
-      <rect x="404" y="70" width="96" height="60" rx="12" fill={C.surface} stroke={C.slateLight} />
-      <text x="420" y="94" fill={C.slate} fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">Part B</text>
-      <rect x="420" y="102" width="52" height="6" rx="3" fill={C.slate} opacity="0.15" />
-      <path d="M404 100l-62 62" stroke={C.slateLight} strokeWidth="1.5" />
+      <rect x="396" y="70" width="112" height="64" fill={C.surface} stroke={C.slateLight} />
+      <text x="452" y="96" textAnchor="middle" fill={C.slate} fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">Part B</text>
+      <rect x="430" y="106" width="44" height="6" fill={C.slate} opacity="0.15" />
+      <path d="M396 102h-40v54" stroke={C.slateLight} strokeWidth="1.5" />
 
-      <rect x="60" y="290" width="96" height="60" rx="12" fill={C.surface} stroke={C.slateLight} />
-      <text x="76" y="314" fill={C.slate} fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">Torque 12.5 Nm</text>
-      <rect x="76" y="322" width="40" height="6" rx="3" fill={C.slate} opacity="0.15" />
-      <path d="M156 320l42-62" stroke={C.slateLight} strokeWidth="1.5" />
+      <rect x="52" y="290" width="112" height="64" fill={C.surface} stroke={C.slateLight} />
+      <text x="108" y="316" textAnchor="middle" fill={C.slate} fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">Torque 12.5 Nm</text>
+      <rect x="86" y="326" width="44" height="6" fill={C.slate} opacity="0.15" />
+      <path d="M164 322h40v-54" stroke={C.slateLight} strokeWidth="1.5" />
 
-      <rect x="404" y="290" width="96" height="60" rx="12" fill={C.surface} stroke={C.slateLight} />
-      <text x="420" y="314" fill={C.slate} fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">Operator #07</text>
-      <rect x="420" y="322" width="40" height="6" rx="3" fill={C.slate} opacity="0.15" />
-      <path d="M404 320l-62-62" stroke={C.slateLight} strokeWidth="1.5" />
+      <rect x="396" y="290" width="112" height="64" fill={C.surface} stroke={C.slateLight} />
+      <text x="452" y="316" textAnchor="middle" fill={C.slate} fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">Operator #07</text>
+      <rect x="430" y="326" width="44" height="6" fill={C.slate} opacity="0.15" />
+      <path d="M396 322h-40v-54" stroke={C.slateLight} strokeWidth="1.5" />
 
-      <g>
-        <rect x="230" y="52" width="100" height="30" rx="15" fill={C.emerald} />
-        <text x="280" y="71" textAnchor="middle" fill="white" fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">100% Traceable</text>
-      </g>
+      <rect x="205" y="36" width="150" height="36" fill={C.emerald} />
+      <text x="280" y="60" textAnchor="middle" fill="white" fontSize="13" fontWeight="800" fontFamily="Inter, sans-serif">100% Traceable</text>
     </svg>
   )
 }
@@ -249,28 +247,28 @@ export function ControlShield({ className }: { className?: string }) {
         ))}
       </g>
 
-      <path d="M280 66l120 40v74c0 66-44 120-120 146-76-26-120-80-120-146v-74z" fill={C.surface} stroke={C.emerald} strokeWidth="2.5" />
-      <path d="M280 66l120 40v74c0 66-44 120-120 146-76-26-120-80-120-146v-74z" fill={C.emerald} opacity="0.05" />
+      <path d="M280 60l120 40v70c0 60-44 106-120 130-76-24-120-70-120-130v-70z" fill={C.surface} stroke={C.emerald} strokeWidth="2.5" />
+      <path d="M280 60l120 40v70c0 60-44 106-120 130-76-24-120-70-120-130v-70z" fill={C.emerald} opacity="0.05" />
 
       <g>
-        <circle cx="280" cy="210" r="42" fill={C.emerald} opacity="0.12" />
-        <circle cx="280" cy="210" r="42" stroke={C.emerald} strokeWidth="2" opacity="0.3" />
-        <path d="M258 210l16 16 34-34" stroke={C.emerald} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="280" cy="190" r="42" fill={C.emerald} opacity="0.12" />
+        <circle cx="280" cy="190" r="42" stroke={C.emerald} strokeWidth="2" opacity="0.3" />
+        <path d="M258 190l16 16 34-34" stroke={C.emerald} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
       </g>
 
-      <text x="280" y="312" textAnchor="middle" fill={C.slate} fontSize="16" fontWeight="800" fontFamily="Inter, sans-serif">Process Deviation Blocked</text>
-      <rect x="205" y="326" width="150" height="22" rx="11" fill={C.sky} />
-      <rect x="205" y="326" width="150" height="22" rx="11" fill="white" opacity="0.1" />
-      <text x="280" y="341" textAnchor="middle" fill="white" fontSize="11" fontWeight="700" fontFamily="Inter, sans-serif">WRONG TORQUE PREVENTED</text>
+      <text x="280" y="338" textAnchor="middle" fill={C.slate} fontSize="16" fontWeight="800" fontFamily="Inter, sans-serif">Process Deviation Blocked</text>
+      <rect x="175" y="352" width="210" height="30" rx="15" fill={C.sky} />
+      <rect x="175" y="352" width="210" height="30" rx="15" fill="white" opacity="0.1" />
+      <text x="280" y="372" textAnchor="middle" fill="white" fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">WRONG TORQUE PREVENTED</text>
 
       <g>
-        <rect x="120" y="356" width="18" height="18" rx="4" fill={C.slate} opacity="0.15" />
-        <rect x="164" y="356" width="18" height="18" rx="4" fill={C.slate} opacity="0.08" />
-        <rect x="208" y="356" width="18" height="18" rx="4" fill={C.slate} opacity="0.15" />
-        <rect x="252" y="356" width="18" height="18" rx="4" fill={C.slate} opacity="0.08" />
-        <rect x="296" y="356" width="18" height="18" rx="4" fill={C.slate} opacity="0.15" />
-        <rect x="340" y="356" width="18" height="18" rx="4" fill={C.slate} opacity="0.08" />
-        <rect x="384" y="356" width="18" height="18" rx="4" fill={C.slate} opacity="0.15" />
+        <rect x="120" y="396" width="18" height="18" rx="4" fill={C.slate} opacity="0.15" />
+        <rect x="164" y="396" width="18" height="18" rx="4" fill={C.slate} opacity="0.08" />
+        <rect x="208" y="396" width="18" height="18" rx="4" fill={C.slate} opacity="0.15" />
+        <rect x="252" y="396" width="18" height="18" rx="4" fill={C.slate} opacity="0.08" />
+        <rect x="296" y="396" width="18" height="18" rx="4" fill={C.slate} opacity="0.15" />
+        <rect x="340" y="396" width="18" height="18" rx="4" fill={C.slate} opacity="0.08" />
+        <rect x="384" y="396" width="18" height="18" rx="4" fill={C.slate} opacity="0.15" />
       </g>
     </svg>
   )
