@@ -75,7 +75,7 @@ export default function Hero() {
                   Book a Demo <ArrowRight size={18} />
                 </Button>
               </a>
-              <a href="#expertise">
+              <a href="#contact">
                 <Button size="xl" variant="outline" className="border-white/15 text-white/80 hover:bg-white/5 hover:text-white hover:border-white/30 rounded-xl">
                   <Play size={18} /> Talk to an Expert
                 </Button>

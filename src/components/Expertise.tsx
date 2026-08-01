@@ -5,6 +5,8 @@ import {
   Cable,
   Fingerprint,
   ShieldCheck,
+  ScanEye,
+  BrainCircuit,
 } from "lucide-react"
 
 const capabilities = [
@@ -80,6 +82,30 @@ const capabilities = [
       "Root-cause prevention by design",
     ],
   },
+  {
+    icon: ScanEye,
+    title: "AI Vision Inspection",
+    description:
+      "AI-powered camera systems verify every assembly in real time, catching what the eye and torque data miss.",
+    items: [
+      "Real-time visual defect detection",
+      "Automated part-presence & orientation checks",
+      "Vision-guided pass/fail per station",
+      "Inspection images linked to serial number",
+    ],
+  },
+  {
+    icon: BrainCircuit,
+    title: "AI-Controlled Systems",
+    description:
+      "Self-learning control loops that monitor process parameters and correct deviations before they become defects.",
+    items: [
+      "Real-time process parameter monitoring",
+      "Predictive drift & anomaly detection",
+      "Auto-correction of tools and parameters",
+      "Models that learn from every build",
+    ],
+  },
 ]
 
 export default function Expertise() {
@@ -98,7 +124,8 @@ export default function Expertise() {
           </h2>
           <div className="w-12 h-1 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-light)] rounded-full mx-auto mt-4" />
           <p className="text-[var(--color-secondary)] mt-5 leading-relaxed text-sm max-w-lg mx-auto">
-            Six core capabilities that turn your engineering intent into guaranteed shop floor execution.
+            Eight core capabilities — including AI vision inspection and AI-controlled systems — that turn
+            your engineering intent into guaranteed shop floor execution.
           </p>
         </div>
 

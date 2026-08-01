@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { Button } from "@/components/ui/button"
+import Logo from "@/components/Logo"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
@@ -34,9 +35,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
-          <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-dark)] flex items-center justify-center text-white font-heading font-extrabold text-base shadow-lg shadow-[var(--color-accent)]/20 group-hover:shadow-[var(--color-accent)]/30 group-hover:scale-105 transition-all duration-300">
-            U
-          </span>
+          <Logo className="w-9 h-9 group-hover:shadow-[var(--color-accent)]/30 group-hover:scale-105 transition-all duration-300" />
           <span className="font-heading font-extrabold text-lg tracking-tight">
             <span className={showScrolled ? "text-[var(--color-foreground)]" : "text-white"}>Unnathi </span>
             <span className={showScrolled ? "text-[var(--color-accent)]" : "text-[var(--color-accent-light)]"}>Solutions</span>

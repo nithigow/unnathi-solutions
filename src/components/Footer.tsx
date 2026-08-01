@@ -1,3 +1,5 @@
+import Logo from "@/components/Logo"
+
 const footerSections = [
   {
     title: "Expertise",
@@ -23,16 +25,14 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-5 group">
-              <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-dark)] flex items-center justify-center text-white font-heading font-extrabold text-lg shadow-lg shadow-[var(--color-accent)]/20 group-hover:scale-105 transition-transform duration-300">
-                U
-              </span>
+              <Logo className="w-10 h-10 group-hover:scale-105 transition-transform duration-300" />
               <span className="font-heading font-extrabold text-lg text-white tracking-tight">
                 Unnathi Solutions
               </span>
             </div>
             <p className="text-sm text-white/40 leading-relaxed max-w-sm">
-              Empowering manufacturers with Industry 4.0 solutions, MES, Industrial IoT, and custom software
-              to build smart factories of the future.
+              Empowering manufacturers with Industry 4.0 solutions, MES, Industrial IoT, AI-powered
+              vision inspection, and custom software to build the smart factories of the future.
             </p>
           </div>
 
